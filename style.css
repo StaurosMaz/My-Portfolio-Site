@@ -70,6 +70,7 @@ nav {
   border-bottom-right-radius: 30px;
   border-bottom-left-radius: 30px;
   min-width: fit-content;
+  min-height: fit-content;
 }
 
 /* end of nav  */
@@ -82,9 +83,33 @@ nav {
 }
 .main-text {
   color: var(--color-primary-white);
-  font-size: 3rem;
+  font-size: 2.6rem;
   font-weight: 300;
   text-transform: uppercase;
   padding-top: 1.4rem;
 }
+.about-me-cont {
+  display: grid;
+
+  min-height: fit-content;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 1.5rem;
+  color: var(--color-primary-white);
+  margin: 2rem 2rem;
+}
+.my-ambition {
+  grid-area: 1/1/2/2;
+  background-color: var(--color-primary-a60);
+  border-radius: 25px;
+}
+.about-me {
+  grid-area: 1/2/2/4;
+  background-color: var(--color-primary-a60);
+  border-radius: 25px;
+}
+.about-me-text {
+  font-weight: 300;
+}
+
 /* end of  main  */
