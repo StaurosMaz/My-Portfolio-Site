@@ -73,3 +73,18 @@ nav {
 }
 
 /* end of nav  */
+/* main  */
+.main {
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--color-primary-black);
+  text-align: center;
+}
+.main-text {
+  color: var(--color-primary-white);
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  padding-top: 1.4rem;
+}
+/* end of  main  */
