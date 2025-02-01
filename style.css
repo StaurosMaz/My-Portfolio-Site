@@ -1,22 +1,19 @@
 :root {
-  --color-primary-white: #ffffff;
-  --color-primary-a10: #ebd4f9;
-  --color-primary-a20: #d5a9f1;
-  --color-primary-a30: #be7eea;
-  --color-primary-a40: #a451e1;
-  --color-primary-a50: #793ea4;
-  --color-primary-a60: #502c6a;
-  --color-primary-a70: #2b1a36;
-  --color-primary-black: #000000;
+  --color-primary-white: #fff;
   --ff-font-fam: Poppins, sans-serif;
 }
 * {
   margin: 0;
   padding: 0;
   font-family: var(--ff-font-fam);
+  box-sizing: border-box;
 }
 /* nav bar */
-
+body {
+  min-height: 100vh;
+  background: url("./assets/blurry-gradient-haikei\ \(1\).png") center/cover
+    no-repeat fixed;
+}
 a {
   text-decoration: none;
   font: 1rem;
@@ -25,43 +22,22 @@ a {
 i {
   padding-right: 10px;
 }
+
 nav {
   width: 100%;
-  background-color: var(--color-primary-black);
   display: flex;
   justify-content: center;
-}
-.button {
-  position: relative;
-  font-size: 1.5rem;
-  padding-bottom: 4px;
-}
-.button:hover {
-  color: var(--color-primary-a10);
-  transition: 0.3s;
-}
-.button::before,
-.button::after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 3px;
-  width: 0;
-  background-color: var(--color-primary-a10);
-  transition: width 0.3s ease, left 0.3s ease;
-}
-.button:hover::before {
-  width: 100%;
-}
-.button:hover::after {
-  width: 100%;
-  left: 0;
+  position: fixed;
+  z-index: 1;
 }
 
 .nav-flex-cont {
   width: 80%;
-  background-color: var(--color-primary-a60);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 1);
   height: 5vh;
   display: flex;
   justify-content: center;
@@ -72,44 +48,63 @@ nav {
   min-width: fit-content;
   min-height: fit-content;
 }
-
+.button {
+  position: relative;
+  font-size: 1.5rem;
+  padding-bottom: 4px;
+}
+.button:hover {
+  color: var(--color-primary-white);
+  transition: 0.3s;
+}
+.button::before,
+.button::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 3px;
+  width: 0;
+  background-color: var(--color-primary-white);
+  transition: width 0.3s ease, left 0.3s ease;
+}
+.button:hover::before {
+  width: 100%;
+}
+.button:hover::after {
+  width: 100%;
+  left: 0;
+}
 /* end of nav  */
 /* main  */
-.main {
-  width: 100%;
-  min-height: 100vh;
-  background-color: var(--color-primary-black);
-  text-align: center;
+.about-me-section {
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 70vh;
+  width: 80%;
 }
-.main-text {
+.about-me-info {
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border: 1px solid rgba(255, 255, 255, 1);
   color: var(--color-primary-white);
-  font-size: 2.6rem;
-  font-weight: 300;
-  text-transform: uppercase;
-  padding-top: 1.4rem;
-}
-.about-me-cont {
-  display: grid;
-
+  font-size: 2rem;
   min-height: fit-content;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 1fr;
-  grid-column-gap: 1.5rem;
-  color: var(--color-primary-white);
-  margin: 2rem 2rem;
-}
-.my-ambition {
-  grid-area: 1/1/2/2;
-  background-color: var(--color-primary-a60);
-  border-radius: 25px;
-}
-.about-me {
-  grid-area: 1/2/2/4;
-  background-color: var(--color-primary-a60);
-  border-radius: 25px;
-}
-.about-me-text {
+  padding: 3rem;
+  margin-right: 5rem;
   font-weight: 300;
+}
+.about-me-info h1 {
+  font-weight: 300;
+  padding-bottom: 2rem;
+}
+.illustration {
+  width: 400px;
 }
 
 /* end of  main  */
